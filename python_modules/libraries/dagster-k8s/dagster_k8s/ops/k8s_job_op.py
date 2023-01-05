@@ -299,7 +299,7 @@ def execute_k8s_job(
 
         try:
             log_entry = next(log_stream)
-            print(log_entry)  # pylint: disable=print-call
+            context.log.info(log_entry)  # pylint: disable=print-call
         except StopIteration:
             break
 
